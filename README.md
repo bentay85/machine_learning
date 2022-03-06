@@ -8,11 +8,10 @@ The folder structure describes what I am interested in learning in the near futu
 | :---: | :----: | :---: |
 | Neural Networks: Audio | Loading and Playing Audio | Done, Using IPython and Torch Audio |
 || Fast Fourier Transform | Done, Using SciPy |
-|| Training a Model | Done, Binary Classification (Forward, Backwards) |
-|| Recording Audio | Planned |
+|| Training a Model | Done, 3 Classes (Ambient, Forward, Backwards) |
+|| Recording Audio from mic | Planned |
 | Neural Networks: Vision | Base / Classification | Planned for learning basic CNN, Residual Blocks, Inception Blocks |
 | | Detection | Planned for learning to extend the CNN to be able to do detection |
 | | Segmentation | Planned for learning to extend the base modules to be able to do segmentation |
-| Neural Networks: Tabular | Nil | Planned for learning to work with Tabular Data |
 | Neural Networks: Natural Language Processing | Nil | Planned for learning to work with Natural Language |
 | Decision Trees | Nil | Planned for learning Gradient Boosted Decision Trees |
