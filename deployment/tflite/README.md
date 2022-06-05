@@ -1,17 +1,25 @@
 ## Introduction
 
-This is the repository where I put what I have learn about various machine learning algorithms. 
+This repository records my exploration of depolying a model on a Raspberry Pi v3.
 
-The folder structure describes what I am interested in learning in the near future.
+## Model
 
-| Main Folder | Category / Subtask | Remarks / Status |
-| :---: | :----: | :---: |
-| Neural Networks: Audio | Loading and Playing Audio | Done, Using IPython and Torch Audio |
-|| Fast Fourier Transform | Done, Using SciPy |
-|| Training a Model | Done, 3 Classes (Ambient, Forward, Backwards) |
-|| Testing on audio recorded from mic | Done, using PyAudio and it worked pretty well |
-| Neural Networks: Vision | Base / Classification | Planned for learning basic CNN, Residual Blocks, Inception Blocks |
-| | Detection | Planned for learning to extend the base modules to be able to do detection |
-| | Segmentation | Planned for learning to extend the base modules to be able to do segmentation |
-| Neural Networks: Natural Language Processing | Nil | Planned for learning to work with Natural Language |
-| Decision Trees | Nil | Planned for learning Gradient Boosted Decision Trees |
+The model that was used was a MobileNet V2 model (with 2 fully connected layers as the classification head) using pre-trained weights from Tensorflow Hub and fine tuned on a classification dataset of various food in Singapore. There are 12 classes within the dataset which are: chilli_crab, curry_puff, dim_sum, ice_kacang, kaya_toast, nasi_ayam, popiah, roti_prata, sambal_stingray, satay, tau_huay and wanton_noodle.
+
+## Pruning and Quanisation
+
+I followed the official guide from Tensorflow to prune and quantise the model. 
+
+https://www.tensorflow.org/model_optimization/guide/pruning/pruning_with_keras
+
+This resulted in the model.tflite file that is included in this repository.
+
+## Inference on the Raspberry Pi
+
+I then followed the official guide from Tensorflow to install the Tensorflow Lite Runtime Interpreter on the Raspberry Pi.
+
+https://www.tensorflow.org/lite/guide/python
+
+Finally, inference was carried out on the Raspberry Pi using tflite_inference.py included in this repository.
+
+![Depolyment of Tensorflow Lite Model on Raspberry Pi](tflite.png)
